@@ -23,23 +23,23 @@ else
 # Function to git-clone dotfiles
 setup_dotfiles() {
 	DOTFILES_DIR="$HOME/.config/dotfiles"
-	DOTFILES_REPO="https://github.com/kavya-shekar/dotfiles.git"
+	DOTFILES_REPO="git@github.com:Kavya-Shekar/dotfiles.git"
 
-	# if [ -d "$DOTFILES_DIR" ]; then
-	# 	echo "$DOTFILES_DIR exists. Checking git repository..."
-	# 	cd "$DOTFILES_DIR"
-	# 	CURRENT_REPO=$(git config --get remote.origin.url)
-	# 	if [ "$CURRENT_REPO" = "$DOTFILES_REPO" ]; then
-	# 		echo "Correct git repository. Pulling latest changes..."
-	# 		git pull
-	# 	else
-	# 		echo "Incorrect git repository. Please check your setup."
-	# 	fi
-	# else
+	if [ -d "$DOTFILES_DIR" ]; then
+		echo "$DOTFILES_DIR exists. Checking git repository..."
+		cd "$DOTFILES_DIR"
+		CURRENT_REPO=$(git config --get remote.origin.url)
+		if [ "$CURRENT_REPO" = "$DOTFILES_REPO" ]; then
+			echo "Correct git repository. Pulling latest changes..."
+			git pull
+		else
+			echo "Incorrect git repository. Please check your setup."
+		fi
+	else
 		echo "Cloning dotfiles repository..."
 		git clone "$DOTFILES_REPO" "$DOTFILES_DIR"
 		cd "$DOTFILES_DIR"
-	# fi
+	fi
 }
 
 # Detecting OS

@@ -13,7 +13,7 @@ then
 fi
 
 # brew bundle --file=$PWD/Brewfile
-grep -E '^(brew|cask)' $PWD/Brewfile | awk '{print $2}' | xargs -P4 -n1 brew install
+grep -E '^(brew|cask)' $HOME/.config/dotfiles/homebrew/Brewfile | awk '{print $2}' | xargs -P4 -n1 brew install
 echo 'Homebrew setup complete.'
 
 exit 0
