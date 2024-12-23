@@ -1,0 +1,23 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+
+brew 'wget'
+cask 'docker'
+cask 'raycast'
+cask 'alacritty'
+cask 'rectangle'
+cask 'tmux'
+
+cask 'zed'
+cask 'obsidian'
+cask 'notion'
+
+cask 'zoom'
+cask 'brave-browser'
+cask 'spotify'
+cask 'whatsapp'
+cask 'slack'
+cask 'notion-calendar'
+cask '1password'
+cask 'zoom'

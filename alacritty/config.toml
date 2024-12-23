@@ -1,0 +1,30 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 17.0
+
+[font.bold]
+family = "IBM Plex Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "IBM Plex Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "IBM Plex Mono"
+style = "Light Italic"
+
+[font.normal]
+family = "IBM Plex Mono"
+style = "Regular"
+
+[keyboard]
+bindings = [
+    { key = "Right", mods = "Alt", chars = "\u001BF" },
+    { key = "Left", mods = "Alt", chars = "\u001BB" },
+]
+
+[general]
+import = ["~/.config/alacritty/catppuccin/catppuccin-latte.toml"]
